@@ -33,7 +33,7 @@ export default {
     async submitConnexion() {
       try {
         const response = await axios.post(
-          "http://localhost:5001/api/auth/login",
+          `${process.env.VUE_APP_API_BASE_URL}/api/auth/login`,
           this.loginData
         );
         // Gérez le succès de la connexion ici

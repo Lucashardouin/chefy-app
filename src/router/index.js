@@ -4,6 +4,7 @@ import SignIn from "@/views/SignInView.vue";
 import SignUp from "@/views/SignUpView.vue";
 import MyProfile from "@/views/MyProfileView.vue";
 import AddCategory from "@/views/CategoryView.vue";
+import AddArticle from "@/views/ArticleView.vue";
 import { authGuard } from "@/authGuard";
 
 const routes = [
@@ -32,6 +33,12 @@ const routes = [
     path: "/category",
     name: "category",
     component: AddCategory,
+    // beforeEnter: authGuard,
+  },
+  {
+    path: "/article",
+    name: "article",
+    component: AddArticle,
     // beforeEnter: authGuard,
   },
 ];

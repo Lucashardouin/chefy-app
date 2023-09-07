@@ -14,7 +14,7 @@
     methods: {
       async test() {
         try {
-          const response = await axios.post('http://localhost:5001/api/profile');
+          const response = await axios.post(`${process.env.VUE_APP_API_BASE_URL}/api/profile`);
           // Gérez le succès de la connexion ici
           console.log(response);
         } catch (error) {

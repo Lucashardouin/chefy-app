@@ -5,6 +5,11 @@
       name="category"
       placeholder="Nom de la category"
     />
+    <textarea
+      v-model="newCategory.description"
+      name="description"
+      placeholder="Description"
+    ></textarea>
 
     <button type="submit">Ajouter la catégorie</button>
   </form>
@@ -18,25 +23,16 @@ export default {
     return {
       newCategory: {
         category: "",
+        description: "",
       },
     };
   },
   methods: {
     async submitCategory() {
       try {
-        const formData = new FormData();
-        formData.append("category", this.newCategory.category);
-
-        console.log("formData:", formData);
-
         const response = await axios.post(
-          "http://localhost:5001/api/category/",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data", // Spécifiez le type de contenu pour envoyer le fichier
-            },
-          }
+          `${process.env.VUE_APP_API_BASE_URL}/api/category/`,
+          this.newCategory
         );
         console.log(response.data.message);
       } catch (error) {

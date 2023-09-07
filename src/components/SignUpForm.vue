@@ -64,7 +64,6 @@ export default {
   methods: {
     async submitInscription() {
       try {
-        console.log("restaurant_name:", this.newUser.restaurant_name);
         const formData = new FormData();
         formData.append("restaurant_name", this.newUser.restaurant_name);
         formData.append("username", this.newUser.username);
@@ -76,10 +75,8 @@ export default {
         formData.append("image", this.newUser.image); // Envoyez l'image sélectionnée
         formData.append("role", this.newUser.role);
 
-        console.log("formData:", formData);
-
         const response = await axios.post(
-          "http://localhost:5001/api/users/",
+          `${process.env.VUE_APP_API_BASE_URL}/api/users/`,
           formData,
           {
             headers: {
