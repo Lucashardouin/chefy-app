@@ -1,0 +1,238 @@
+.restaurant_container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+  background: var(--grey050, #fafafa);
+  .image_wrapper {
+    position: relative;
+    display: inline-block;
+    img {
+      width: 100%;
+      //   height: 400px;
+    }
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -52.3%);
+      background-color: rgba(
+        24,
+        20,
+        20,
+        0.7
+      ); /* Ajoute un fond semi-transparent pour la lisibilité */
+      color: #fff;
+      padding: 10px 20px;
+      width: 96.3%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.menu_container {
+  margin: 0 auto;
+  width: 80%;
+  .mymenu_container {
+    display: flex;
+    flex-direction: column;
+    .category_container {
+      display: flex;
+      gap: 16px;
+      .categorie_container {
+        .categorie_title {
+          padding: 20px 20px 0;
+          margin-top: 0;
+        }
+        .categorie_desc {
+          margin-top: 0;
+          padding-left: 20px;
+          color: var(--grey600, #7e7e7e);
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        .article_container {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          .articles_container {
+            width: 200px;
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border-top: 1px solid var(--grey200, #dcdcdc);
+            background: var(--white, #fff);
+            border-radius: 10px;
+            margin: 20px;
+            padding: 20px;
+            flex-direction: column;
+            gap: 16px;
+            align-items: flex-start;
+            img {
+              width: 150px;
+              height: 150px;
+              border-radius: 20px;
+            }
+            p {
+              margin: 0px;
+            }
+            .description {
+              font-style: italic;
+            }
+            .prix {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .restaurant_card {
+    .restaurant_container {
+      .image_wrapper {
+        img {
+          width: 100%;
+          //   height: 400px;
+        }
+        h1 {
+          width: 100%;
+          transform: translate(-50%, -52%);
+          background-color: rgba(
+            24,
+            20,
+            20,
+            0.7
+          ); /* Ajoute un fond semi-transparent pour la lisibilité */
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+        }
+      }
+    }
+    .menu_container {
+      margin: 0;
+      width: 100%;
+      .mymenu_container {
+        .category_container {
+          width: 100%;
+          margin: 0 auto;
+          .categorie_container {
+            margin: 0 auto;
+            width: 100%;
+            .article_container {
+              flex-direction: column;
+              .articles_container {
+                border-radius: 0;
+                box-sizing: border-box;
+                flex-direction: row-reverse;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                .infos_article {
+                  width: 70%;
+                  justify-content: space-around;
+                  display: flex;
+                  flex-direction: column;
+                  height: 120px;
+                  .name {
+                    color: var(--black, #252525);
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                  }
+                  .description {
+                    color: var(--grey600, #7e7e7e);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                  .prix {
+                    margin-bottom: 0;
+                    color: var(--black, #252525);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .restaurant_card {
+    .restaurant_container {
+      .image_wrapper {
+        img {
+          width: 100%;
+          //   height: 400px;
+        }
+      }
+    }
+    .menu_container {
+      margin: 0;
+      width: 100%;
+      .mymenu_container {
+        .category_container {
+          width: 100%;
+          margin: 0 auto;
+          .categorie_container {
+            margin: 0 auto;
+            width: 100%;
+            .article_container {
+              flex-direction: column;
+              .articles_container {
+                border-radius: 0;
+                box-sizing: border-box;
+                flex-direction: row-reverse;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                .image_article {
+                  img {
+                    width: 100px;
+                    height: 100px;
+                  }
+                }
+                .infos_article {
+                  width: 50%;
+                  justify-content: space-around;
+                  display: flex;
+                  flex-direction: column;
+                  height: 100px;
+                  .prix {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

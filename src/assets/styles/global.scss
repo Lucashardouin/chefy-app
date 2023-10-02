@@ -1,0 +1,36 @@
+html, body {
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.2s ease-in-out;
+  margin: 0 auto;
+  min-height: 95vh;
+}
+h1, h2, h3, h4, h5{
+  margin: 0;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  gap: 129px;
+  background: var(--grey050, #fafafa);
+  min-height: 90vh
+}
+.content{
+  min-height: 80vh;
+  
+}
+button{
+  cursor: pointer;
+}
+
+@import "@/assets/styles/font_recoleta/stylesheet.css";
+@import "@/assets/styles/font_poppins/stylesheet.css";
+@import "@/assets/styles/font_inter/stylesheet.css";
+@import "header.scss";
+@import "home.scss";
+@import "signup.scss";
+@import "signin.scss";
+@import "profile.scss";
+@import "article.scss";
+@import "menu.scss";
+@import "footer.scss";

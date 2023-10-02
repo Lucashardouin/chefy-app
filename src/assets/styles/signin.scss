@@ -1,0 +1,48 @@
+.signin_form{
+    display: flex;
+    // width: 437px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 50px;
+    input {
+        display: flex;
+        height: 42px;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+        border-radius: 8px;
+        border: 1.5px solid var(--grey200, #dcdcdc);
+        background: var(--white, #fff);
+        width: 437px;
+      }
+    button {
+        cursor: pointer;
+        display: flex;
+        width: 437px;
+        padding: 12px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        border-radius: 8px;
+        background: var(--primary, #ff7116);
+        border: none;
+        color: var(--white, #fff);
+        text-align: center;
+        font-family: Poppins;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px; /* 112.5% */
+        margin-bottom: 10px;
+      }
+}
+
+@media screen and (max-width: 480px){
+  .signin_form{
+    text-align: center;
+    button {
+      width: auto;
+    }
+  }
+}
